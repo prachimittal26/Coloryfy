@@ -1,0 +1,96 @@
+@import './logos.css';
+
+.ci {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+
+.ci-invert {
+  filter: invert(1);
+}
+
+.ci-2xs {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.ci-xs {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.ci-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.ci-md {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ci-lg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ci-xl {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.ci-2xl {
+  width: 2rem;
+  height: 2rem;
+}
+
+.ci-1x {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ci-2x {
+  width: 2rem;
+  height: 2rem;
+}
+
+.ci-3x {
+  width: 3rem;
+  height: 3rem;
+}
+
+.ci-4x {
+  width: 4rem;
+  height: 4rem;
+}
+
+.ci-5x {
+  width: 5rem;
+  height: 5rem;
+}
+
+.ci-6x {
+  width: 6rem;
+  height: 6rem;
+}
+
+.ci-7x {
+  width: 7rem;
+  height: 7rem;
+}
+
+.ci-8x {
+  width: 8rem;
+  height: 8rem;
+}
+
+.ci-9x {
+  width: 9rem;
+  height: 9rem;
+}
+
+.ci-10x {
+  width: 10rem;
+  height: 10rem;
+}

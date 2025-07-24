@@ -1,0 +1,45 @@
+name: Minify CSS
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  minify-css:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+
+      - name: Run update scripts
+        run: node scripts/listFolders.js
+          
+      - name: Install clean-css-cli
+        run: npm install -g clean-css-cli
+
+      - name: Minify logos.css
+        run: cleancss -o src/app/logos.min.css src/app/logos.css
+
+      - name: Minify ci.css
+        run: cleancss -o src/app/ci.min.css src/app/ci.css
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update generated files"
+          git push

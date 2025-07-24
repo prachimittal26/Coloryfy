@@ -1,0 +1,53 @@
+{
+  "name": "coloured-icons",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/listFolders.js && next dev",
+    "build": "node scripts/listFolders.js && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "minify:logos": "cleancss -o src/app/logos.min.css src/app/logos.css",
+    "minify:ci": "cleancss -o src/app/ci.min.css src/app/ci.css",
+    "minify": "pnpm run minify:logos && pnpm run minify:ci"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-navigation-menu": "^1.2.13",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-use-controllable-state": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "1.1.1",
+    "lucide-react": "^0.523.0",
+    "next": "^15.3.3",
+    "next-themes": "^0.4.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "clean-css-cli": "^5.6.3",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.3.3",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3"
+  },
+  "description": "coloured-icons in development",
+  "main": "next.config.js",
+  "keywords": [
+    "coloured"
+  ],
+  "author": "Dheeresh Agarwal",
+  "license": "ISC"
+}
